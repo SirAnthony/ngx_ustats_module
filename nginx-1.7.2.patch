@@ -204,7 +204,7 @@ index 18b04f7..90bbbe3 100644
          }
      }
 @@ -3418,5 +3476,20 @@ ngx_http_upstream_next(ngx_http_request_t *r, ngx_http_upstream_t *u,
-      ngx_uint_t  status, state;
+     ngx_uint_t  status, state;
  
 +#if (NGX_HAVE_USTATS_MODULE)
 +    if (stats_data) {
